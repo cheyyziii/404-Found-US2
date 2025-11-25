@@ -1,0 +1,1 @@
+window.alert("Hello, We are the group \"404 Found: Us\"!");
