@@ -16,10 +16,10 @@ window.alert("Hello, We are the group \"404 Found: Us\"!");
             // Here is the if / else logic: if age is 18 or older, show Adult, otherwise show Minor.
             if (age >= 18) {
                 ageResult.textContent = `You are ${age} years old — Adult.`;
-                ageResult.style.color = 'green';
+                ageResult.style.color = 'pink';
             } else {
                 ageResult.textContent = `You are ${age} years old — Minor.`;
-                ageResult.style.color = 'blue';
+                ageResult.style.color = 'skyblue';
             }
         });
 
@@ -52,37 +52,48 @@ window.alert("Hello, We are the group \"404 Found: Us\"!");
             }
         });
 
-         // Example 3: Guess the Animal
-        const animalInput = document.getElementById('animalInput');
-        const animalBtn = document.getElementById('animalBtn');
-        const animalResult = document.getElementById('animalResult');
+        // Example 3: if / else if / else
+        const weatherInput = document.getElementById('weatherInput');
+        const weatherBtn = document.getElementById('weatherBtn');
+        const weatherResult = document.getElementById('weatherResult');
+        let maxNUm ;
+        const minNUM = 1;
 
-        animalBtn.addEventListener('click', () => {
-            const animal = animalInput.value.trim().toLowerCase();
-            if (!animal) {
-                animalResult.textContent = 'Please enter an animal.';
-                animalResult.style.color = 'crimson';
+        weatherBtn.addEventListener('click', () => {
+            const weather = weatherInput.value.trim().toLowerCase();
+
+            if (!weather) {
+                weatherResult.textContent = 'Please enter a valid weather condition.';
+                weatherResult.style.color = 'crimson';
                 return;
-            }
+            }   
 
-            // if / else if / else chain provides multiple branches depending on the temperature
-            if (animal = "goldfish" || "salmon" || "tuna" || "clownfish" || "shark") {
-                animalResult.textContent = 'Correct! That is a fish.';
-                animalResult.style.color = 'navy';
-            } else if (animal = "octopus" || "squid" || "jellyfish" || "sea anemone") {
-                animalResult.textContent = 'Correct! That is a sea creature.';
-                animalResult.style.color = 'teal';
-            } else if (animal = "Dolphin" || "Whale" || "Seal" || "Sea Otter") {
-                animalResult.textContent = 'Nice and warm.';
-                animalResult.style.color = 'green';
-            } else if (animal = "Shrimp" || "Crab" || "Lobster" || "Krill") {
-                animalResult.textContent = 'Nice and warm.';
-                animalResult.style.color = 'green';
-            } else if (animal = "Sea Turtle" || "Stingray" || "Starfish" || "Sea urchin") {
-                animalResult.textContent = 'Nice and warm.';
-                animalResult.style.color = 'green';
-            } else {
-                animalResult.textContent = 'Hot — stay hydrated and stay in the shade.';
-                animalResult.style.color = 'orange';
-            }
-        });
+        // Corrected comparisons: ===
+        if (weather === 'snowy') {
+            weatherResult.textContent = 'Freezing! Wear a heavy coat.';
+            weatherResult.style.color = 'skyblue';
+        } else if (weather === 'windy') {
+            weatherResult.textContent = 'Cool weather. Wear a jacket.';
+            weatherResult.style.color = 'gray';
+        } else if (weather === 'rainy') {
+            weatherResult.textContent = 'It can feel cold when it rains — bring a raincoat!';
+            weatherResult.style.color = 'blue';
+        } else {
+            weatherResult.textContent = 'Hot — stay hydrated and stay in the shade.';
+            weatherResult.style.color = 'orange';
+        }
+    });
+        // Example 4: Difficulty Level and Number Guessing
+       /* const levelSelect = prompt("Select difficulty level: easy, normal, hard").toLowerCase();
+        let maxNumber; 
+        switch (levelSelect) {
+                case 'easy' :
+                  maxNumber = 5;
+                  break;
+                case 'normal' :
+                  maxNumber = 10;
+                  break;
+                case 'hard' :
+                  maxNumber = 15;
+                  break;
+            }*/
