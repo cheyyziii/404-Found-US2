@@ -1,0 +1,15 @@
+body{
+    background:linear-gradient(45deg, purple, pink);
+    color: white;
+    margin: auto;
+
+}
+
+:hover{
+    background-color: azure;
+    font-size: 18px;
+}
+
+
+
+
